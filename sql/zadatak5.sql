@@ -24,6 +24,7 @@ create table djelo(
 # vanjski ključ 
 alter table djelo add foreign key (izlozba) references izlozba(sifra);
 
+# nedostaje još vanjskih ključeva nije gotovo
 
 create table kustos(
     sifra int not null primary key auto_increment,
