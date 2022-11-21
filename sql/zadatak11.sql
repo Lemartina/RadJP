@@ -14,8 +14,7 @@ create table kolegij(
     sifra int not null primary key auto_increment,
     naziv varchar(50),
     bodovi char(3),
-    trajanje time,
-    student int
+    trajanje time
 );
 
 create table rok(
@@ -26,7 +25,16 @@ create table rok(
     kolegij int
 );
 
+create table polaznicikolegija(
+    student int,
+    kolegij int,
+    datumpocetka datetime,
+    datumkraja datetime
+);
+
+
 # vanjski ključevi
 
 alter table rok add foreign key (kolegij) references kolegij (sifra);
-alter table kolegij add foreign key (student) references student(sifra);
+alter table polaznicikolegija add foreign key (student) references student (sifra);
+alter table polaznicikolegija add foreign key (kolegij) references kolegij (sifra);
