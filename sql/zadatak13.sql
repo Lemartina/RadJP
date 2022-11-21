@@ -28,7 +28,7 @@ create table predavaci(
 );
 
 
-# vanjski ključevi
+# vanjski ključevi treba postaviti ispravne vanjske ključeve
 alter table ucenik add foreign key razred references razred(sifra);
 alter table predavaci add foreign key profesor references profesor(sifra);
 alter table predavaci add foreign key razred references razred(sifra);
