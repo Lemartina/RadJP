@@ -82,6 +82,7 @@ values
 (null, 'Marko', 'Jakobović', '2022/545-1'),
 (null, 'Petar', 'Marković', '2021/588-1');
 
+# 1. prijava
 insert into polaznicikolegija (student, kolegij)
 values
 (10, 5),
@@ -105,6 +106,25 @@ values
 (5, 5),
 (4, 5),
 (3, 5),
+(2, 5),
+(1, 1),
+(1, 4),
+(1, 5);
+
+
+# 2. prijava
+insert into polaznicikolegija (student, kolegij)
+values
+(10, 5),
+(10, 4),
+(9, 2),
+(8, 5),
+(8, 3),
+(8, 1),
+(7, 1),
+(7, 2),
+(7, 3),
+(6, 5),
 (2, 5),
 (1, 1),
 (1, 4),
