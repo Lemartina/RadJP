@@ -21,8 +21,8 @@ create table kolegij(
 
 create table rok(
     sifra int not null primary key auto_increment,
-    nazivroka varchar (20),
-    datum date,
+    nazivroka varchar (20) not null,
+    datum date not null,
     vrijeme time,
     kolegij int not null
 );
@@ -129,3 +129,93 @@ values
 (1, 1),
 (1, 4),
 (1, 5);
+
+
+
+
+# ispravci
+# dodavanje naziva roka nije bilo not null
+
+update rok set 
+nazivroka= 'zimski'
+where sifra in (4,7,9);
+
+update rok set 
+datum= '2023-01-26'
+where sifra=2 ;
+
+
+update rok set 
+datum= '2023-02-26'
+where sifra=4 ;
+
+
+update rok set 
+datum= '2022-12-22'
+where sifra=7 ;
+
+
+update rok set 
+datum= '2023-01-15'
+where sifra=9 ;
+
+# dodavanje više rokova po pojedinom kolegiju
+insert into rok(sifra, nazivroka, datum, vrijeme, kolegij)
+values
+(null, 'zimski','2022-11-3', null, 5),
+(null, 'zimski','2022-12-4', null, 5),
+(null, 'ljetni','2022-08-16', null, 5);
+
+
+insert into rok(sifra, nazivroka, datum, vrijeme, kolegij)
+values
+(null, 'zimski','2022-11-3', null, 4),
+(null, 'ljetni','2023-03-4', null, 4),
+(null, 'ljetni','2023-02-16', null, 4);
+
+
+
+insert into rok(sifra, nazivroka, datum, vrijeme, kolegij)
+values
+(null, 'zimski','2022-10-4', '09:00:00', 1),
+(null, 'ljetni','2023-07-6', null, 1),
+(null, 'ljetni','2023-08-18', null, 1);
+
+update rok set datum='2023-08-12' where sifra =8;
+
+delete from polaznicikolegija;
+
+insert into polaznicikolegija (student, kolegij)
+values
+(10, 5),
+(10, 4),
+(10, 3),
+(10, 2),
+(10, 1),
+(9, 4),
+(9, 2),
+(8, 5),
+(8, 3),
+(8, 1),
+(7, 1),
+(7, 2),
+(7, 3),
+(6, 5),
+(6, 4),
+(6, 1),
+(6, 2),
+(6, 3),
+(5, 5),
+(4, 5),
+(3, 5),
+(2, 5),
+(1, 1),
+(1, 4),
+(1, 5);
+
+create table prijavanarok
+(sifra int not null primary key auto_increment,
+prijava boolean,
+rok int);
+
+alter table prijavanarok add foreign key (rok) references rok(sifra);
