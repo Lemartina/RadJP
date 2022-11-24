@@ -7531,3 +7531,14 @@ where prezime = 'Novoselac';
 insert into autor(sifra, ime, prezime, datumrodenja)
 values
 (null, 'Martina', 'Novoselac','1989-01-26');
+
+
+# Obrišite sve kataložne zapise koji govore o smrti
+
+select * from katalog;
+
+select * from katalog
+where naslov like '%smrt%';
+
+delete from katalog 
+where  naslov like '%smrt%';
