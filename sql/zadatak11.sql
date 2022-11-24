@@ -219,3 +219,34 @@ prijava boolean,
 rok int);
 
 alter table prijavanarok add foreign key (rok) references rok(sifra);
+
+
+
+#ispravci 
+
+update rok set 
+nazivroka = 'zimski'
+where sifra = 2;
+
+alter table prijavanarok add column student int;
+
+alter table prijavanarok add foreign key (student) references student(sifra);
+
+alter table prijavanarok drop column prijava;
+
+insert into prijavanarok (sifra, rok, student)
+values
+(null, 1, 1),
+(null, 11, 1),
+(null, 12, 1),
+(null, 2, 1),
+(null, 7, 1),
+(null, 14, 1),
+(null, 4, 1),
+(null, 10, 1),
+(null, 5, 1),
+(null, 18, 1),
+(null, 1, 1),
+(null, 8, 1),
+(null, 15, 1),
+(null, 13, 1);
