@@ -55,12 +55,29 @@ alter table voznja add foreign key (vozac) references vozac (sifra);
 
 # Popunjavanje tablica
 
-insert into putnik (sifra, dob, lokacija, vrijemedolaska, vozac)
+insert into putnik 
+(sifra, dob, lokacija, vrijemedolaska, vozac)
 values 
 (null, 'dijete', 'Svete Ane 17 Osijek', '18:00:00', '1'),
-(null, 'odrasla osoba', 'Ivana Mažurainića 17 Osijek', '2'),
-(null, 'dijete', 'Petra Preradovoća 3 Tenja', '2'),
-(null, 'dijete', 'A. Waldingera 45 Osijek', '3')
+(null, 'odrasla osoba', 'Ivana Mažurainića 17 Osijek', '21:00:00', '2'),
+(null, 'dijete', 'Petra Preradovoća 3 Tenja', '16:20','2'),
+(null, 'dijete', 'A. Waldingera 45 Osijek', '14:00:00', '3')
 ;
 
 
+ insert into vozac(sifra, ime, prezime, iban)
+ values 
+ (null, 'Pero', 'Perić','HR7923400097722248444'),
+ (null, 'Marko', 'Marković','HR4023400098719311467'),
+ (null, 'Janko', 'Janković','HR4325000094474277255'),
+ (null, 'Đuro', 'Đurić','HR3523600002161521453'),
+ (null, 'Maja', 'Perić','HR2023400096162643833');
+
+ insert into vozilo 
+(sifra, registracija, maxmjesta, autosjedalica, invalid, vozac)
+values
+(null, 'OS-123-NA', 4, 'da', 'da', 1),
+(null, 'OS-236-DL', 7, 'da', 'da', 2),
+(null, 'OS-565-NL', 4, 'ne', 'ne', 3),
+(null, 'OS-987-JF', 7, 'da', 'da', 4),
+(null, 'OS-582-TL', 4, 'ne', 'da', 5);
