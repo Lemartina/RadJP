@@ -1,7 +1,7 @@
 # c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\Administrator\Documents\GitHub\RadJP\RadJP\sql\zadatak11.sql
 
 drop database if exists fakultet;
-create database fakultet  default charset utf8;;
+create database fakultet  default charset utf8;
 use fakultet;
 
 create table student(
