@@ -4,26 +4,19 @@ drop database if exists djecjaIgraonica;
 create database djecjaIgraonica default charset utf8;
 use djecjaIgraonica;
 
-# rođendaonica, cjelodenvni boravaka, dvosatna igraonica
+# rođendaonica, cjelodenvni boravak, dvosatna igraonica
 create table program(
     sifra int not null primary key auto_increment,
-    naziv varchar (50),
-    usluga int not null,
-    grupa int not null
+    naziv varchar (50)
+    
     
 );
-# vatrogasci, policajci, poliklnika , božićni paket, uskrsni paket, classic paket, dnevno čuvanje
+# vatrogasci, policajci, poliklnika , božićni paket, uskrsni paket, classic paket, dnevno čuvanje, vikend čuvanje
 create table usluga(
     sifra int not null primary key auto_increment,
     vrsta varchar (50),
     cijena decimal(18,2),
-    jedinicaMjere int not null,
-    zaposlenik int not null
-);
-# komad, paket, sat
-create table jedinicaMjere(
-    sifra int not null primary key auto_increment,
-    naziv varchar (20)
+    djelatnik int not null
 );
 
 # 0-4, 2-12, 9-15
@@ -38,8 +31,8 @@ create table dijete(
     ime varchar(20),
     prezime varchar(20), 
     imeRoditelja varchar(20),
-    telefonRoditelja varchar (20),
-    grupa int not null
+    telefonRoditelja varchar (20)
+    
 );
 
 create table posjeta(
@@ -63,3 +56,11 @@ create table djelatnik(
     radnoMjesto varchar(50)
 );
 
+
+# vanjski ključevi 
+
+alter table posjeta add foreign key (dijete) references dijete(sifra);
+alter table posjeta add foreign key (grupa) references grupa (sifra);
+alter table posjeta add foreign key (program) references program (sifra);
+alter table posjeta add foreign key (usluga) references usluga(sifra);
+alter table usluga add foreign key (djelatnik) references djelatnik(sifra);
