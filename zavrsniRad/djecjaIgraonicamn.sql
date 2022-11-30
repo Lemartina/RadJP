@@ -1,5 +1,5 @@
 
-# c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\Polaznik\Documents\EdunovaJP27\djecjaigraonica.sql
+# c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\Administrator\Documents\GitHub\RadJP\RadJP\zavrsniRad\djecjaIgraonicamn.sql
 drop database if exists djecjaIgraonica;
 create database djecjaIgraonica default charset utf8;
 use djecjaIgraonica;
@@ -21,8 +21,8 @@ create table dijete(
     ime varchar(20),
     prezime varchar(20), 
     imeRoditelja varchar(20),
-    telefonRoditelja varchar (20),
-	usluga int
+    telefonRoditelja varchar (20)
+
     
 );
 
@@ -61,6 +61,5 @@ create table djelatnik(
 alter table posjeta add foreign key (djelatnik) references djelatnik(sifra);
 alter table posjetaDijete add foreign key (posjeta) references posjeta(sifra);
 alter table posjetaDijete add foreign key (dijete) references dijete(sifra);
-alter table dijete add foreign key(usluga) references usluga (sifra);
 alter table posjetaUsluga add foreign key (posjeta) references posjeta (sifra);
 alter table posjetaUsluga add foreign key (usluga) references usluga(sifra);
