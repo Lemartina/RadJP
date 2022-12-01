@@ -10,9 +10,10 @@ use djecjaIgraonica;
 # vatrogasci, policajci, poliklnika , božićni paket, uskrsni paket, classic paket, dnevno čuvanje, vikend čuvanje
 create table usluga(
     sifra int not null primary key auto_increment,
-    vrsta varchar (50),
+    naziv varchar (50),
     cijena decimal(18,2),
-    program int not null
+    jeidnicaMjere int not null,
+    kolicina decimal(18,2)
 );
 
 
@@ -63,3 +64,13 @@ alter table posjetaDijete add foreign key (posjeta) references posjeta(sifra);
 alter table posjetaDijete add foreign key (dijete) references dijete(sifra);
 alter table posjetaUsluga add foreign key (posjeta) references posjeta (sifra);
 alter table posjetaUsluga add foreign key (usluga) references usluga(sifra);
+
+
+# koje dijete koristi koju uslugu
+
+select ime.a, prezime.a, naziv.e
+from dijete a 
+inner join posjetadijete b on a.sifra=b.dijete 
+inner join posjeta c on b.posjeta=c.sifra 
+inner join posjetausluga d on c.sifra=d.posjeta 
+inner join usluga e on d.usluga=e.sifra;
