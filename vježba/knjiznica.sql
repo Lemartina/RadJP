@@ -7485,7 +7485,7 @@ insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (3220, 'RUM PU
 insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (3221, 'KRALJICA ŠKOLE', 19299, 441, 71323);
 
 
-
+/*
 #### BAZA knjiznica
 
 # Izlistajte sve autore koji su rođeni
@@ -7542,3 +7542,81 @@ where naslov like '%smrt%';
 
 delete from katalog 
 where  naslov like '%smrt%';
+
+
+
+select * from mjesto;
+
+select * from mjesto 
+where sifra=2;
+
+select naziv, postanskiBroj as 'Poštanski broj' from mjesto
+where sifra=2;
+
+select  postanskibroj , 'tekst', length (naziv), naziv as NAZIV
+from mjesto
+where sifra=2;
+
+select * from autor;
+
+select ime, prezime from autor
+where sifra=2;
+
+select * from izdavac;
+
+select naziv as NAZIV, aktivan as A from izdavac
+where aktivan > 0;
+
+select naziv from izdavac
+where sifra in (414, 490, 696);
+
+select naziv from izdavac
+where naziv like '%obrt%';
+
+
+
+
+select * from autor;
+
+
+select  ime, prezime from autor;
+
+select * from katalog;
+
+
+select naslov from katalog 
+where naslov  like '%b%';
+
+
+select * from mjesto;
+
+select naziv from mjesto where naziv like 'y%';
+
+select  naziv, postanskiBroj from mjesto where postanskibroj is null;
+
+select naziv, sifra from mjesto 
+where sifra not between 2000 and 3000;
+
+select * from katalog 
+where sifra>3000 and naslov like '%ljubav%';
+
+
+
+select * from autor;
+
+select * from autor
+where datumrodenja ='1874-04-18';
+
+select * from izdavac;
+
+
+
+select naziv, aktivan from izdavac
+where naziv like '%.' and aktivan >0;
+
+select * from izdavac
+where aktivan=0 and sifra not in(346,234,589);
+
+select * from autor;
+
+select distinct length(ime), ime from autor;*/
