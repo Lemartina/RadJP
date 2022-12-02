@@ -7646,4 +7646,22 @@ select a.ime, a.prezime, b.naslov
 from autor a
 inner join katalog b on b.autor=a.sifra 
 inner join mjesto c on b.mjesto=c.sifra 
-where a.ime='August' and a.prezime ='šenoa';*/
+where a.ime='August' and a.prezime ='šenoa';
+
+
+select * from mjesto;
+
+
+select * from mjesto where sifra=2;
+
+
+update mjesto set naziv='Osijek' where sifra=2;
+
+update mjesto set naziv='Zagreb' where sifra=2;
+
+update mjesto set naziv='Makarska', drzava='Hrvatska' where sifra=4;
+select * from mjesto where sifra=4;
+
+
+select* from katalog;
+delete from katalog where sifra=2;*/

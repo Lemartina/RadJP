@@ -920,7 +920,7 @@ INSERT INTO  mjesto  ( postanskibroj ,  zupanija ,  naziv ) VALUES
 
 
 
-
+/*
 
 #### BAZA mjesta
 # izlistajte sva mjesta 
@@ -939,3 +939,7 @@ where zupanija =14;
 
 select * from mjesto
 where naziv like '%nt';
+
+
+
+
