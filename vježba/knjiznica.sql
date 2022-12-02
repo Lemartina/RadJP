@@ -7619,4 +7619,31 @@ where aktivan=0 and sifra not in(346,234,589);
 
 select * from autor;
 
-select distinct length(ime), ime from autor;*/
+select distinct length(ime), ime from autor;
+
+
+
+select * from autor;
+
+select distinct length(ime), ime from autor;
+
+
+# koje je sve knjige napisao a.šenoa
+
+select * from autor;
+
+select sifra, ime, prezime from autor 
+where  ime='August' and prezime='Šenoa';
+
+select * from katalog;
+
+select naslov, autor from katalog
+where autor=2;
+
+#spajanje
+
+select a.ime, a.prezime, b.naslov
+from autor a
+inner join katalog b on b.autor=a.sifra 
+inner join mjesto c on b.mjesto=c.sifra 
+where a.ime='August' and a.prezime ='šenoa';*/
