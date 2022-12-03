@@ -2,6 +2,7 @@
 
 # c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\Administrator\Documents\GitHub\RadJP\RadJP\Kolokvij\vjazba1.sql
 
+# 0
 drop database if exists vjezba1;
 create database vjezba1;
 use vjezba1;
@@ -93,7 +94,7 @@ alter table sestra_svekrar add foreign key (svekar) references svekar(sifra);
 alter table cura add foreign key (punac) references punac (sifra);
 
 
-# popunjavanje tablica
+# 1 popunjavanje tablica
 
 insert into svekar (sifra, bojaociju, prstena, dukserica, lipa, eura, majica)
 values 
@@ -125,4 +126,49 @@ values
 (null, 'plava', null, null, 'maxmara', 1),
 (null, 'plava', null, null, 'rayban', 3);
 
-update cura set gustoca decimal (15,77) not null;
+
+alter table cura modify column gustoca decimal(18,2) not null;
+
+
+insert into cura (sifra, novcica, gustoca, lipa, ogrlica, bojakose, suknja, punac)
+values
+(null,20,15.77, null,23,null, null, 2),
+(null,25,15.77, null,254,null, null, 3),
+(null,30,15.77, null,45,null, null, 1);
+
+
+insert into punac(sifra, ogrlica, gustoca, hlace)
+values 
+(null, null,null, 'crna'),
+(null, null,null, 'plava'),
+(null, null,null, 'crvena');
+
+insert into mladic(sifra, suknja, kuna, drugiputa, asocijalno, ekstroverntno, dukserica, muskarac)
+values
+(null, 'crvena', 23.56, null, null, 4, 'plava', 3),
+(null, 'zelena', 10.56, null, null, 456, 'žuta', 2),
+(null, 'žuta', 40.56, null, null, 56, 'bijela', 1);
+
+# 3
+delete from mladic where kuna > 15.78;
+
+#4
+select 
+kratkamajica from zena 
+where hlace like '%ana%';
+
+# 5
+select f.dukserica, a.asocijalno, b.hlace
+from mladic a 
+inner join muskarac b on a.muskarac=b.sifra
+inner join zena c on b.zena=c.sifra 
+inner join sestra d on c.sestra=d.sifra 
+inner join sestra_svekrar e on e.sestra=d.sifra 
+inner join svekar f on e.svekar=f.sifra 
+where
+c.hlace like 'a%' and
+d.haljina like '%ba%'
+order by b.hlace;
+
+# 6
+select haljina, maraka from sestra;
