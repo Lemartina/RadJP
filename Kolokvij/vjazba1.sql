@@ -1,4 +1,4 @@
-# početak 23:11 H -23:47 H
+# početak 23:11 H -23:47 H, 9:43 h-10:31h 
 
 # c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\Administrator\Documents\GitHub\RadJP\RadJP\Kolokvij\vjazba1.sql
 
@@ -91,3 +91,38 @@ alter table mladic add foreign key (muskarac) references muskarac(sifra);
 alter table sestra_svekrar add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekrar add foreign key (svekar) references svekar(sifra);
 alter table cura add foreign key (punac) references punac (sifra);
+
+
+# popunjavanje tablica
+
+insert into svekar (sifra, bojaociju, prstena, dukserica, lipa, eura, majica)
+values 
+(null, 'plava', null, null, null, null, null),
+(null, 'smeđa', null, null, null, null, null),
+(null, 'plava', null, null, null, null, null);
+
+insert into sestra (sifra, introvertno, haljina, maraka, hlace, narukvica)
+values
+(null, null, 'žuta na plave točkice', null, 'crvene', 'zlatna'),
+(null, null, 'crvena', null, 'plava', 'srebrna'),
+(null, null, 'ružičasta', null, 'crvena', 'zlatna');
+
+insert into sestra_svekrar (sifra, sestra, svekar)
+values 
+(null, 1,1),
+(null, 2,2),
+(null, 3,3);
+
+insert into zena(sifra, treciputa, hlace, kratkamajica, jmbag, bojaociju, haljina, sestra)
+values
+(null, null, null, 'crvena', '12345678910', 'zelena', null,1),
+(null, null, null, 'žuta', '23569874556', 'ljubičasta', null,2),
+(null, null, null, 'crna', '98452365789', 'narančasta', null,3);
+
+insert into muskarac(sifra, bojaociju , hlace, modelnaocala,marka,zena)
+values
+(null, 'smeđa', null, null, 'rayban', 2),
+(null, 'plava', null, null, 'maxmara', 1),
+(null, 'plava', null, null, 'rayban', 3);
+
+update cura set gustoca decimal (15,77) not null;
