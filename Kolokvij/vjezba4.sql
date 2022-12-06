@@ -20,7 +20,7 @@ create table ostavljen(
     sifra int not null primary key auto_increment, 
     modelnaocala varchar(43),
     introvertno bit,
-     kuna decima(14,10)
+    kuna decimal(14,10)
 );
 
 create table snasa(
@@ -40,11 +40,11 @@ create table becar(
 );
 
 create table prijatelj(
-    sifa int not null primary key auto_increment,
+    sifra int not null primary key auto_increment,
     eura decimal(16,9),
     prstene int not null, 
     gustoca decimal(16,5),
-    jmbag cher (11) not null,
+    jmbag char (11) not null,
     suknja varchar(47) not null,
     becar int not null
 );
@@ -53,7 +53,7 @@ create table zena(
     sifra int not null primary key auto_increment,
     suknja varchar(39) not null,
     lipa decimal(18,7),
-    prstena  itn not null
+    prstena int not null
     );
 
     create table zena_mladic (
@@ -62,8 +62,29 @@ create table zena(
         mladic int not null
     );
 
+create table mladic(
+    sifra int not null primary key auto_increment,
+    kuna decimal(15,9),
+    lipa decimal (18,5),
+    nausnica int,
+    stilfrizura varchar(49),
+    vesta varchar(34)
+);
 
 
+alter table punac add foreign key(ostavljen) references ostavljen(sifra);
+alter table snasa add foreign key(zena) references zena(sifra);
 
 
-    
+alter table becar add foreign key(snasa) references snasa(sifra);
+alter table prijatelj add foreign key(becar) references becar(sifra);
+alter table zena_mladic add foreign key(zena) references zena(sifra);
+alter table zena_mladic add foreign key(mladic) references mladic(sifra);
+
+# unos u tablice
+
+
+insert into punac(sifra, treciputa, majica, jmbag, novcic, maraka, ostavljen)
+values (null, 'zelena', '1234566666', 10, 20,1),
+(null, 'plava', '1234566666', 10, 20,1),
+(null, 'žuta', '1234566666', 10, 20,1),
