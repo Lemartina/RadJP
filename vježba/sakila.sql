@@ -1,3 +1,6 @@
+# c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\Administrator\Documents\GitHub\RadJP\RadJP\vježba\sakila.sql
+
+
 -- Sakila Sample Database Schema
 -- Version 1.0
 
@@ -47079,3 +47082,74 @@ COMMIT;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+# vježba
+
+ BAZA SAKILA
+
+# izlistajte sve glumce
+ select * from actor;
+
+# Postoji li u bazi moj omiljeni glumac
+
+select * from actor
+where first_name ='Joe' and last_name='swank';
+
+
+select * from actor
+where first_name like 'B%'
+and last_name like 'P%';
+
+# unesite glumca Brad Pitt
+
+insert into actor(actor_id, first_name, last_name, last_update)
+values
+(null, 'Brad', 'Pitt', '2022-12-05 00:00:00');
+
+
+
+select * from actor
+where first_name='Brad';
+
+# U kojim je sve filmovima glumio 
+# BURT	POSEY
+
+
+select c.first_name , c.last_name, a.title
+from film a 
+inner join film_actor b on a.film_id=b.film_id 
+inner join actor c on b.actor_id=c.actor_id 
+where c.first_name='Burt' and c.last_name='Posey';
+
+select c.title 
+from actor a
+inner join film_actor b on a.actor_id=b.actor_id 
+inner join film c on b.film_id =c.film_id 
+where a.first_name ='BURT' 
+and a.last_name  = 'POSEY';
+
+
+select distinct f.first_name, f.last_name 
+from actor a
+inner join film_actor b on a.actor_id=b.actor_id 
+inner join film c on b.film_id =c.film_id
+inner join inventory d on c.film_id = d.film_id 
+inner join rental e on d.inventory_id = e.inventory_id 
+inner join customer f on e.customer_id =f.customer_id 
+where a.first_name ='BURT' 
+and a.last_name  = 'POSEY'
+order by f.last_name asc, 1 desc
+limit 10,15;
+
+
+# Agregiranje rezultata, grupiranje
+# i filtriranje agregranih vrijednosti
+select a.last_name, sum(c.amount) 
+from customer a
+inner join rental b on a.customer_id =b.customer_id 
+inner join payment c on b.rental_id =c.rental_id
+group by a.last_name
+having sum(c.amount) between 100 and 110
+order by 2 desc;
