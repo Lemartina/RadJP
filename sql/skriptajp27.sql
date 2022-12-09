@@ -175,3 +175,10 @@ from polaznik a
 left join clan b on a.sifra =b.polaznik
 inner join osoba c on a.osoba=c.sifra
 where b.grupa is null;
+
+select 
+concat(
+left (upper (ime),2),
+upper(prezime)
+)
+from osoba;
