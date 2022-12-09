@@ -86,15 +86,15 @@ alter table zena_mladic add foreign key(mladic) references mladic(sifra);
 
 insert into ostavljen(sifra, modelnaocala, introvertno, kuna)
 values
-(null, 'maxmara', 1, 10.53),
-(null, 'rayban', 0, 26.53),
-(null, 'maxmara', 0 53.53);
+(null, 'maxmara', 1, '10.53'),
+(null, 'rayban', 0, '26.53'),
+(null, 'maxmara', 0, '53.53');
 
-insert into punac(sifra, treciputa, majica, jmbag, novcic, maraka, ostavljen)
+insert into punac(sifra, treciputa, majica, jmbag, novcica, maraka, ostavljen)
 values 
-(null, 'zelena', '1234566666', 10, 20,1),
-(null, 'plava', '1234566666', 10, 20,1),
-(null, 'žuta', '1234566666', 10, 20,1);
+(null, '2022-02-03 17:00:00', 'zelena', '1234566666', '10', '32','1'),
+(null,'2022-02-03 17:00:00', 'plava', '81890337429', '15', '20','2'),
+(null, '2022-02-03 17:00:00','žuta', '1234566666', '30', '14','3');
 
 insert into mladic(sifra, kuna, lipa, nausnica, stilfrizura, vesta)
 values
@@ -102,18 +102,18 @@ values
 (null, 12,70, 1, 'kratka kosa', 'plava'),
 (null, 13,69, 1, 'kratka kosa', 'zelena');
 
-insert into zena (sifra, suknja, lipa, prstena)
+insert into zena(sifra, suknja, lipa, prstena)
 values
-(null,'poluduga ',105, 0),
-(null,'kratka ',15, 1),
-(null,'duga ',1654, 0);
+(null,'poluduga ','105', 0),
+(null,'kratka ','15', 1),
+(null,'duga ','1654', 0);
 
 
-insert into mladic(sifra, zena, mladic)
+insert into mladic(sifra, kuna, lipa, nausnica, stilfrizura, vesta)
 values 
-(null, 1, 1),
-(null, 2, 2),
-(null, 3, 3);
+(null, 10, 1, 50, 'duga', ' žuta'),
+(null, 7, 32, 25, 'kratka', ' plava'),
+(null, 18, 45, 65, 'duga', ' crvena');
 
 insert into snasa (sifra, introvertno, treciputa, haljina, zena)
 values
@@ -127,8 +127,10 @@ values
 (null, 236.56, 'poliester','crvena',2),
 (null, 159.56, 'lan','plava',3);
 
-insert into prijatelj (sifra, eura, prestena, gustoca, jmbag, suknja, becar)
+insert into prijatelj (sifra, eura, prstene, gustoca, jmbag, suknja, becar)
 values
-(null, 32.56, 2, 464.5465, '12345678978', 1),
-(null, 598.56, 2, 345.5465, '94545664548', 2),
-(null, 77896.56, 2, 545.5465, '12344544978', 3);
+(null, '32.56', '2', '464.5465', '12345678978','dugačka', 1),
+(null, '598.56', '2', '345.5465', '94545664548','kratka', 2),
+(null, '77896.56', '2', '545.5465', '12344544978','debela', 3);
+
+
