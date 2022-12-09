@@ -134,3 +134,32 @@ values
 (null, '77896.56', '2', '545.5465', '12344544978','debela', 3);
 
 
+
+# update
+update punac set majica='Osijek' where sifra in (1,2,3);
+
+# delete
+delete from prijatelj where prstene >17;
+
+# select
+select haljina from snasa where treciputa  is null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
