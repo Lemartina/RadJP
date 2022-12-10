@@ -4,7 +4,7 @@ drop database if exists vjezba4;
 create database vjezba4;
 use vjezba4;
 
-# 0 tablice i Venezia
+# 0 tablice i veze
 
 create table punac(
     sifra int not null primary key auto_increment,
@@ -42,7 +42,7 @@ create table becar(
 create table prijatelj(
     sifra int not null primary key auto_increment,
     eura decimal(16,9),
-    prstene int not null, 
+    prstena int not null, 
     gustoca decimal(16,5),
     jmbag char (11) not null,
     suknja varchar(47) not null,
@@ -109,12 +109,6 @@ values
 (null,'duga ','1654', 0);
 
 
-insert into mladic(sifra, kuna, lipa, nausnica, stilfrizura, vesta)
-values 
-(null, 10, 1, 50, 'duga', ' žuta'),
-(null, 7, 32, 25, 'kratka', ' plava'),
-(null, 18, 45, 65, 'duga', ' crvena');
-
 insert into snasa (sifra, introvertno, treciputa, haljina, zena)
 values
 (null, 0, '2022-01-05 00:00:00' , 'ljubičasta', 1),
@@ -127,7 +121,7 @@ values
 (null, 236.56, 'poliester','crvena',2),
 (null, 159.56, 'lan','plava',3);
 
-insert into prijatelj (sifra, eura, prstene, gustoca, jmbag, suknja, becar)
+insert into prijatelj (sifra, eura, prstena, gustoca, jmbag, suknja, becar)
 values
 (null, '32.56', '2', '464.5465', '12345678978','dugačka', 1),
 (null, '598.56', '2', '345.5465', '94545664548','kratka', 2),
@@ -139,16 +133,39 @@ values
 update punac set majica='Osijek' where sifra in (1,2,3);
 
 # delete
-delete from prijatelj where prstene >17;
+delete from prijatelj where prstena >17;
+
 
 # select
 select haljina from snasa where treciputa  is null;
 
+# 5 zadatak
+
+select a.nausnica, f.jmbag, e.kratkamajica 
+from mladic a
+inner join zena_mladic b on a.sifra=b.mladic
+inner join zena c on b.zena=c.sifra
+inner join snasa d on c.sifra=d.zena
+inner join becar e on d.sifra=e.snasa
+inner join prijatelj f on e.sifra=f.becar 
+where c.lipa =! 29 order by e.kratkamajica desc;
 
 
 
+# popravci
+delete from mladic where sifra in(1,2,3);
+update prijatelj set prstena=3 where sifra=1;
+update prijatelj set prstena=5 where sifra=3;
 
+# 6 zadatak
 
+select a.lipa, f.prstena
+from mladic a 
+right join zena_mladic b on a.sifra=b.mladic
+right join zena c on b.zena=c.sifra
+right join snasa d on c.sifra=d.zena
+right join becar e on d.sifra=e.snasa
+right join prijatelj f on e.sifra=f.becar;
 
 
 
