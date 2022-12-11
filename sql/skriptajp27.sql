@@ -182,3 +182,14 @@ left (upper (ime),2),
 upper(prezime)
 )
 from osoba;
+
+# funkcije
+
+select email (ime, prezime) as email from osoba;
+
+select adddate(now(), interval 90 day);
+select adddate(now(), interval -90 day);
+
+select datediff(now(), '1989-01-26') * 24 *60 *70;
+select datediff(now(), '1926-08-27') * 24 *60 *70;
+select datediff(now(), '2020-02-06') * 24 *60 *70; 
