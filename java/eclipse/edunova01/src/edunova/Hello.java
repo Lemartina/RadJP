@@ -1,9 +1,9 @@
-package edunova01;
+package edunova;
 
 public class Hello {
 
 	public static void main(String[] args) {
-		System.out.println("Hello Martina");
+		System.out.println("Pozdrav Martina");
 
 	}
 
