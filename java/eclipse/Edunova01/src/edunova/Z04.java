@@ -21,6 +21,16 @@ public class Z04 {
 		System.out.println(rezultat);
 		
 		
+		
+		int brojZaUnosDrugi = Integer.parseInt
+				(JOptionPane.showInputDialog("Unesi broj 87")
+						);
+		int fiksniBrojDrugi = 8;
+		
+		
+		int rezultatDrugi = brojZaUnosDrugi % fiksniBrojDrugi;
+		System.out.println(rezultatDrugi);
+		
 
 	}
 
