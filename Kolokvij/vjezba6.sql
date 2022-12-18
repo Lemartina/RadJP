@@ -53,7 +53,7 @@ create table ostavljena(
             nausnica int not null,
             treciputa datetime not null,
             narukvica int not null,
-            hlace verchar(31),
+            hlace varchar(31),
             prijatelj int not null
     
         );
@@ -75,3 +75,43 @@ create table ostavljena(
             nausnica int,
             zena int not null
         );
+
+        # veze
+
+        alter table prijatelj_ostavljena add foreign key (prijatelj) references prijatelj(sifra);
+        alter table prijatelj_ostavljena add foreign key (ostavljena) references ostavljena(sifra);
+        alter table brat add foreign key (prijatelj) references prijatelj(sifra);
+        alter table zena add foreign key (brat) references brat(sifra);
+        alter table decko add foreign key (zena) references zena(sifra);
+        alter table svekrva add foreign key(punac) references punac(sifra);
+
+        # 1 
+
+insert into ostavljena (sifra, prviputa, kratkamajica, drugiputa, maraka)
+values
+(null, '2022-10-23 00:00:00', 'crna', '2022-11-02',10),
+(null, '2022-05-27 00:00:00', 'crna', '2022-06-12',15),
+(null, '2022-03-11 00:00:00', 'crna', '2022-02-02',20);
+
+
+insert into prijatelj (sifra, haljina, prstena, introvertno, stilfrizura)
+values
+(null, 'duga', 10, 0,'kratka'),
+(null, 'zelena', 30, 1,'poluduga'),
+(null, 'crvena', 40, 0,'kratka');
+
+insert into prijatelj_ostavljena (sifra, prijatelj, ostavljena)
+values
+(null, 1, 1),
+(null, 2, 2),
+(null, 3, 3);
+
+insert into brat(sifra, nausnica, treciputa, narukvica, hlace, prijatelj)
+values
+(null, 10, '2021-10-03 00:01:01',20, 'plave', 1),
+(null, 02, '2022-09-23 00:01:01',20, 'zelene',2),
+(null, 20, '2021-11-02 00:01:01',20, 'lubičaste', 3);
+
+
+
+
