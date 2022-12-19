@@ -113,5 +113,14 @@ values
 (null, 20, '2021-11-02 00:01:01',20, 'lubičaste', 3);
 
 
+insert into zena(sifra, novcica, narukvica, dukserica, haljina, hlace, brat)
+values
+(null, '12.5', 45, 'velika', 'dugačka', 'crne', 1),
+(null, '13.75', 450, 'kratka', 'kratka', 'plave', 2),
+(null, '20.55', 425, 'mala', 'bezveze', 'žute', 3);
 
-
+insert into decko (sifra, prviputa, modelnaocala, nausnica, zena)
+values
+(null, '2020-06-06', 'rayban', 2, 1),
+(null, '2020-06-20', 'maxmara', 3, 2),
+(null, '2021-06-12', 'maxmara', 10, 3);
