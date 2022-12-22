@@ -21,15 +21,14 @@ public class Z06 {
 		
 		
 		int broj;
-		for(;;) {
+		for( int i=1; i>=100 ; i++) {
 			broj = Integer.parseInt(
 					JOptionPane.showInputDialog(
 							"Unesi broj između 1 i 999")
 					);
-			if(broj<=1 && broj>=999) {
+			if(broj<1 && broj>100) {
 				break;
 			}
 		}
-		System.out.println("Greška:" + broj);
-	}
-}
+		System.out.println();
+}}
