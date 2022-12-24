@@ -5,6 +5,6 @@
  * @author Administrator
  *
  */
-module edunova04 {
+module edunova100 {
 	requires java.desktop;
 }
