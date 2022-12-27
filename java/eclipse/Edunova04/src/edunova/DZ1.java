@@ -22,20 +22,25 @@ public class DZ1 {
 //		:  :  :  :  :  :   :by Martina
 //		-------------------------------
 
+		
+		System.out.print(" -------------------------------------------\n");	
+		System.out.println(":  :  :  :  :  TABLICA MNOZENJA  :  :  :  : ");
 		System.out.print(" -------------------------------------------\n");	
 		System.out.print("*");
 		for (int f=1; f<=9; f++) {
-			System.out.print(" "+f+" ");}	
+			System.out.print("Q"+f+"Đ");}	
 		System.out.print("\n");	
 		for (int v=1; v<=9; v++) {
 		System.out.println(v + "|");}	
 		
 		for (int i =1; i<=9; i++) {
 		for (int j=1;j<=9; j++){
-				if (i<10) {
-					System.out.print("  ");
+				if (i<=9) {
+					System.out.print(" f "+ i*j);
+					}else {
+						System.out.println(" š"+ i*j);
 				}
-				System.out.print(" "+i*j);
+				
 			}
 			System.out.println();
 					}
