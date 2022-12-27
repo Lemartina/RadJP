@@ -16,6 +16,11 @@ public class DZ001 {
 		System.out.print(" --------------------------\n");	
 		
 		//ispis tablice
+		
+		// ispis prvog stupca
+		
+	
+		
 		for (int i =1; i<=9; i++) {
 		for (int j=1;j<=9; j++){
 				if ((i*j)<=9) {
@@ -25,12 +30,11 @@ public class DZ001 {
 				}
 				
 			}
+		
 			System.out.println();
 					}
 		 
-		// ispis prvog stupca
-//		for (int v=1; v<=9; v++){
-//		System.out.println(v + "|");}	
+
 		System.out.print(" --------------------------\n");	
 		System.out.print(" :  :  :  :  :  :by Martina\n");	
 		System.out.print(" --------------------------\n");	
