@@ -1,4 +1,4 @@
-package edunova;
+ package edunova;
 
 public class ZimskiZadaci6 {
 
@@ -8,6 +8,8 @@ public class ZimskiZadaci6 {
 			System.out.println(i + "-");
 						
 		}
+
+		
 			
 				
 	for (int i=10; i<=13; i++) {
@@ -16,6 +18,7 @@ public class ZimskiZadaci6 {
 			
 			
 		}
+
 	System.out.print("\n");
 		
 		for (int i=9; i>=6; i--) {	
