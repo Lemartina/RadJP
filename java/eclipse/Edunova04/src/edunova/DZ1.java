@@ -27,6 +27,7 @@ public class DZ1 {
 		System.out.println(":  :  :  :  :  TABLICA MNOZENJA  :  :  :  : ");
 		System.out.print(" -------------------------------------------\n");	
 		System.out.print("*");
+		System.out.print(" -------------------------------------------\n");	
 		for (int f=1; f<=9; f++) {
 			System.out.print(" "+f+" ");}	
 		System.out.print("\n");	
