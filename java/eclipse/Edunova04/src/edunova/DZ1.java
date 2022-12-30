@@ -1,5 +1,7 @@
 package edunova;
 
+import javax.swing.JOptionPane;
+
 public class DZ1 {
 
 	public static void main(String[] args) {
@@ -22,34 +24,91 @@ public class DZ1 {
 //		:  :  :  :  :  :   :by Martina
 //		-------------------------------
 
+		//unos imena
+		String ime = JOptionPane.showInputDialog("Upiši svoje ime:");
 		
-		System.out.print(" -------------------------------------------\n");	
-		System.out.println(":  :  :  :  :  TABLICA MNOZENJA  :  :  :  : ");
-		System.out.print(" -------------------------------------------\n");	
-		System.out.print("*");
-		System.out.print(" -------------------------------------------\n");	
-		for (int f=1; f<=9; f++) {
-			System.out.print(" "+f+" ");}	
+		//ispis prvih crta
+		for (int k = 0; k < 29; k++) {
+			System.out.print("-");}
 		System.out.print("\n");	
-		for (int v=1; v<=9; v++) {
-		System.out.println(v + "|");}	
-		
-		for (int i =1; i<=9; i++) {
-		for (int j=1;j<=9; j++){
-				if ((i*j)<=9) {
-					System.out.print("  "+ i*j);
-					}else {
-						System.out.print(" "+ i*j);
-				}
+
+		System.out.println(": : : TABLICA  MNOŽENJA : : :");
+
+		//ispis drugih crta
+		for (int k = 0; k < 29; k++) {
+			System.out.print("-");}
+		System.out.print("\n");	
+		// ispis zaglavlja
+				System.out.print("* |");
+				for (int f=1; f<=9; f++) {
+					System.out.print(" "+f+" ");}	
+				System.out.print("\n");	
 				
+				//ispis trećih crta
+				for (int k = 0; k < 29; k++) {
+					System.out.print("-");}
+				System.out.print("\n");	
+		// petlja tablice
+
+		for (int i = 1; i <=9; i++) {
+			for (int j = 1; j <=9; j++) {
+				if ((i * j <=9)) {
+					if (j == 1) {
+						System.out.print(i * j + " | ");
+					} else {
+						System.out.print(" ");
+					}}
+				if ((i>10)&&(i * j < 100)) {
+					System.out.print(i * j + "c ");
+				}  else {
+					System.out.print(i*j+" ");
+				}
+
+			}
+			if (i == 9) {
+				System.out.println();
+				for (int k = 0; k < 29; k++) {
+					System.out.print("-");
+				}
+				System.out.println();
+
+				
+				
+				// ispis imena
+				
+				
+				switch (ime.length()) {
+				
+				case 3:
+					System.out.println(" : : : : : : : : : : : by " + ime);
+					break;
+				case 4:
+					System.out.println(" : : : : : : : : : : :by " + ime);
+					break;
+				case 5:
+					System.out.println(" : : : : : : : : : : by " + ime);
+					break;
+				case 6:
+					System.out.println(" : : : : : : : : : :by " + ime);
+					break;
+				case 7:
+					System.out.println(" : : : : : : : : : by " + ime);
+					break;
+				case 8:
+					System.out.println(" : : : : : : : : :by " + ime);
+					break;
+				default: 
+					System.out.println("Ime nije dobro");
+				}
+
+				for (int k = 0; k < 29; k++) {
+					System.out.print("-");
+				}
+
 			}
 			System.out.println();
-					}
-		 
-		
-		System.out.print(" -------------------------------------------\n");	
-		System.out.print(" :  :  :  : :  :  :  :  :  :  :  :by Martina\n");	
-		System.out.print(" -------------------------------------------\n");	
+		}
+
 	}
 
 }
