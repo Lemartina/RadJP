@@ -14,17 +14,17 @@ public class Z03 {
 		
 		
 		
-		int jedan = Integer.parseInt(JOptionPane.showInputDialog("Unesi prvi cijeli broj"));
-		int dva= Integer.parseInt(JOptionPane.showInputDialog("Unesi drugi cijeli broj"));
-		
-		int zbrojeno = jedan + dva;
+	//skraćeno, ali isto
 		
 		
-		if (zbrojeno > 10) {
-			System.out.println("Osijek");
-		}else {
-			System.out.println("Edunova");
-		}
+		
+		System.out.print((Integer.parseInt(JOptionPane.showInputDialog("Unesi prvi cijeli broj")) + 
+		Integer.parseInt(JOptionPane.showInputDialog("Unesi drugi cijeli broj"))) > 10 ? "Osijek" : "Edunova") ;
+		
+		
+		
+		
+		
 		
 	}
 
