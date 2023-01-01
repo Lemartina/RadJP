@@ -1,5 +1,7 @@
 package edunova;
 
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
 public class Z06 {
@@ -19,12 +21,29 @@ public class Z06 {
 		// 89 8
 		
 		
-	
+		int b ;
+		for(;;) {
+			b= Integer.parseInt(
+					JOptionPane.showInputDialog(
+							"Unesi broj između 1 i 5")
+					);
 			
-			
-	
-				
+			if(b<=0 && b>=6) 
+			{break;}
+			else if (b>=1 && b<=5)
+			{break;} 
+			System.out.println(b +" greška");
+		}
 		
+		System.out.println(b);
+		
+		
+		
+	
+int temp[] = {564};
+		
+
+		System.out.println(temp[temp.length-1]);
 		
 		
 		
