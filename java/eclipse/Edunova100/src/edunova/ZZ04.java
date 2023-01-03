@@ -32,6 +32,8 @@ public class ZZ04 {
 		int a= Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redaka za 2. matricu:"));
 		int b= Integer.parseInt(JOptionPane.showInputDialog("Unesi broj sutupaca za 2. marticu"));
 		
+		
+		
 		System.out.println("2. matrica");
 		System.out.println("\t");
 		for(a=1; a<=4;a++) {
@@ -43,4 +45,7 @@ public class ZZ04 {
 
 }
 		System.out.println("\t");
+		
+		
+		//zbroj matrica
 }}

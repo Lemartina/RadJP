@@ -58,6 +58,7 @@ public class DZ1 {
 					} else {
 						System.out.print(" ");
 					}}
+				
 				if ((i>10)&&(i * j < 100)) {
 					System.out.print(i * j + "c ");
 				}  else {

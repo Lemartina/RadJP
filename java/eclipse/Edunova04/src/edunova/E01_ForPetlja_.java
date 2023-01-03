@@ -35,9 +35,9 @@ public class E01_ForPetlja_ {
 		
 		//zbroji sve brojeve od 1 do 100
 //		int ukupno = 0;
-//		
+		
 //		for( int i=1; i<=100; i=i+1) {
-//			zkupno=ukupno+i;
+//			ukupno=ukupno+i;
 //			
 //			if(i!=100) {
 //				System.out.println(ukupno + "+"+ (i+1));
@@ -45,7 +45,7 @@ public class E01_ForPetlja_ {
 //					System.out.println(ukupno);
 //				}
 //		}
-//		
+		
 //		
 //		//ispisati sve parne brojeve od 12 do 35
 //		
@@ -58,24 +58,24 @@ public class E01_ForPetlja_ {
 //	
 //	}
 		//ispisati svaki 5 broj od 5 do 100
-		
-		
-//		for (int i=5;i<=100; i=i+5) {
-//			System.out.println(i);
-//		}
-		
-		
-//		
-//		for (int i=20; i<=500; i=i+20) {
-//			if (i%2==0);
-//			{
-//				System.out.println(i);
-//			}
-//			
-//		}
 //		
 //		
-//		//deklarirajte niz od 2 cjelih brojeva
+////		for (int i=5;i<=100; i=i+5) {
+////			System.out.println(i);
+////		}
+//		
+//		
+////		
+////		for (int i=20; i<=500; i=i+20) {
+////			if (i%2==0);
+////			{
+////				System.out.println(i);
+////			}
+////			
+////		}
+////		
+////		
+////		//deklarirajte niz od 2 cjelih brojeva
 //		int niz[] = new int[2];
 //		
 //		// unijeli vrijdnosti za sve elemente niza
@@ -86,14 +86,14 @@ public class E01_ForPetlja_ {
 //					);
 //		}
 //		
-////		//zbrojite vrijednosti svih elemenata niza
-////		
+//////		//zbrojite vrijednosti svih elemenata niza
+//////		
 //		zbroj=0;
 //		for(int i=0;i<niz.length;i++) {
 //			zbroj+=niz[i];
 //		}
-////		
-////		//ispišite zbroj
+//////		
+//	//ispišite zbroj
 //		System.out.println(zbroj);
 //		
 //		String grad = "Osijek";
@@ -104,14 +104,14 @@ public class E01_ForPetlja_ {
 		
 		//ugnježđivanje petlji
 		
-		System.out.print(" - - - - - - - - \n");	
-		for (int i =1; i<=10; i++) {
-			for (int j=1;j<=10; j++) {
-				
-				System.out.print("   "+i * j+ " - ");
-			}
-			System.out.println();
-		}
+//		System.out.print(" - - - - - - - - \n");	
+//		for (int i =1; i<=10; i++) {
+//			for (int j=1;j<=10; j++) {
+//				
+//				System.out.print("   "+i * j+ " - ");
+//			}
+//			System.out.println();
+//		}
 		
 		
 		// preskakanje petlje - nastavak

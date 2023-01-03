@@ -36,26 +36,9 @@ public class Z06 {
 		}
 		
 		System.out.println(b);
+			
 		
-		
-		
-	
-int temp[] = {564};
 		
 
-		System.out.println(temp[temp.length-1]);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
