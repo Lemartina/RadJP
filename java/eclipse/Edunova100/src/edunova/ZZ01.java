@@ -5,7 +5,8 @@ import javax.swing.JOptionPane;
 public class ZZ01 {
 
 	public static void main(String[] args) {
-		// Kreirati program koji unosi 24 broja, ispisuje njihov zbroj, najmanji i  najveći uneseni broj.
+		// Kreirati program koji unosi 24 broja, 
+		//ispisuje njihov zbroj, najmanji i  najveći uneseni broj.
 		
 		
 //		zbroj prva 24 broja
@@ -40,7 +41,9 @@ for(int i=0;i<niz.length;i++) {
 		System.out.println(zbroj);
 
 
-
+// ispisuje najmanji i  najveći uneseni broj
+		
+		
 
 
 

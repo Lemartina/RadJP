@@ -15,24 +15,20 @@ public class ZZ03 {
 		System.out.println("Ovo je prvi broj: " + jedan);
 		System.out.println("Ovo je drugi broj: " + dva);
 
-		int min = jedan < dva ? jedan : dva;
-		int max = jedan > dva ? jedan : dva;
+		// fali uvjet prosti broj djeljen prirodnim brojem s ostatkom se ne ispisuje
 
-		int rezultat = 0;
-
-		for (int i = min; i < max; i++) {
-			if (i / 1 == i) {
-				rezultat+=i;{
-			}
-				System.out.println("Ovo je rezezultat1: " + rezultat);
-			} else if (i / i == 1) {
-				rezultat += i;
-				{
-					System.out.println("Ovo je rezultat2: " + rezultat);
+		for (int i = jedan; i < dva; i++) {
+			if ((i%2!=0) && (i / 1 == i) && (i / i == 1))
+					System.out.print(" "+ i);
+				}  if (jedan>dva) {
+										
+					System.out.println("Greška: prvi broj mora biti manji od drugog");
 				}
 
-			}
 
-		}
+		
+	
 	}
-}
+		
+	}
+
