@@ -1,8 +1,19 @@
  package edunova;
 
+import javax.swing.JOptionPane;
+
 public class ZimskiZadaci6 {
 
 	public static void main(String[] args) {
+		
+//Kreirati program koji ispisuje cikličnu matricu 
+		
+	// unos podataka
+		
+		int a= Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redaka:"));
+		int b= Integer.parseInt(JOptionPane.showInputDialog("Unesi broj sutupaca:"));
+		
+		
 		for (int i=14; i<=16; i++) {
 			
 			System.out.println(i + "-");

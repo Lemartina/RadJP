@@ -52,30 +52,25 @@ public class ZZ04 {
 	
 		
 		// unos podataka
-		
-				int c= (i*j) ;
-				int d= (a*b);
-				
-				
-				
-				System.out.println(" Zbrajanje matrica");
-				System.out.println("\t");
-				for(a=c; c<=32;c++) {
-					for(d=1;d<=32;d++) {
-							System.out.print(" "+ c+d);
-					}
-								
-					System.out.println();
+		System.out.println("2. matrica");
+		System.out.println("\t");
+		for(a=1*2; a<=4*2;a++) {
+			for(b=1*2;b<=4*2;b++) {
+					System.out.print(" "+ a*b);
+			}
+						
+			System.out.println();
 
-		}
-				System.out.println("\t");
+}
+		System.out.println("\t");
+		
+		
+		
+		
+		
+
+
 				
-		
-		
-		
-		
-		
-		
 		
 		
 		
