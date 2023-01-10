@@ -5,6 +5,8 @@ public class E04_VisedimenzionalniNizovi {
 	public static void main(String[] args) {
 		int matrica [] [] = new int [10] [10];
 		
+	
+		
 		int kocka [] [] [] = new int [10][10][10];
 		
 	int kockaUvremenu[][][][] = new int [10][10][10][10];

@@ -5,11 +5,13 @@ import javax.swing.JOptionPane;
 public class ZZ01 {
 
 	public static void main(String[] args) {
-		// Kreirati program koji unosi 24 broja, 
-		//ispisuje njihov zbroj, najmanji i  najveći uneseni broj.
 		
-		
-//		zbroj prva 24 broja
+	//	System.out.println("Definirani brojevi");
+		// Kreirati program koji unosi 24 broja,
+		// ispisuje njihov zbroj, najmanji i najveći uneseni broj.
+
+		//zbroj prva 24 broja, brojevi su unaprijed definirani
+		//niz je od 1 do 24, gdje je najmanji 1, a najveći 24  
 //		int ukupno=0;
 //		
 //		
@@ -17,42 +19,42 @@ public class ZZ01 {
 //			ukupno=ukupno+m;
 //		}
 //System.out.println("Zbroj prva 24 broja je: " + ukupno);
-
-
-
-
+//		
+//		int min =1;
+//		int max=24;
+//		
+//		System.out.println("Najmanji broj je: "+ min);
+//		System.out.println("Najveći broj je: "+ max);		
+//		
+//		
+//		
+		
+System.out.println("Korisnik unosi brojeve");
 // program koji zbraja 24 unesena broja
 
-int niz[] = new int[24];
-for(int i=0;i<niz.length;i++) {
-	niz[i] = Integer.parseInt(
-			JOptionPane.showInputDialog(
-					"Unesi " + (i+1) + ". broj")
-			);
-}
+		// unos brojeva
+
+		int niz[] = new int[3];
+		for (int i = 0; i < niz.length; i++) {
+			niz[i] = Integer.parseInt(JOptionPane.showInputDialog("Unesi " + (i + 1) + ". broj"));
+		}
 //zbrojite vrijednosti svih elemenata niza
 
-		int zbroj=0;
-		for(int i=0;i<niz.length;i++) {
-			zbroj+=niz[i];
-		}
 		
-		//ispišite zbroj
-		System.out.println(zbroj);
+		
+		int zbroj = 0;
+		
+				
+		for (int i = 0; i < niz.length; i++) {
+			zbroj += niz[i];
+		}
 
+		// ispišite zbroj
+		System.out.println("Zbroj unesenog niza je: "+ zbroj);
+		
+		
 
 // ispisuje najmanji i  najveći uneseni broj
-		
-		
 
 
-
-
-
-
-
-
-
-	}
-
-}
+	}}

@@ -18,7 +18,7 @@ public class ZZ03 {
 		// fali uvjet prosti broj djeljen prirodnim brojem s ostatkom se ne ispisuje
 
 		for (int i = jedan; i < dva; i++) {
-			if 	((i%2==1) && (i / 1 == i) && (i / i == 1)&& (i>1)))
+			if 	((i%2==1) && (i / 1 == i) && (i / i == 1)&& (i>1))
 					System.out.print(" "+ i);
 				}  
 		
