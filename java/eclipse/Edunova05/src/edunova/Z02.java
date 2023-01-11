@@ -8,7 +8,7 @@ public class Z02 {
 		// Korisnik unosi 5 brojeva
 		// između 2 i 4
 		// Program ispisuje njihov umnožak
-		long umnozak = 1;
+		long umnozak = 12;
 		int brojac = 1;
 		int broj;
 		while (brojac < 5) {
