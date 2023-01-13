@@ -13,7 +13,7 @@ public class ZimskiZadaci6 {
 		int red = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redaka:"));
 
 	
-		int Matrica[][] = new int[stupac][red];
+		int matrica[][] = new int[stupac][red];
 		int broj = 1;
 
 		int stupacKraj = stupac - 1;
@@ -21,13 +21,14 @@ public class ZimskiZadaci6 {
 		int  redKraj= red - 1;
 		int redPocetak = 0;
 
-		vanjska: for (int i=0; broj <= stupac * red;) {
+		vanjska: 
+			for (;;) {
 
 			for (int j = redKraj; j >= redPocetak; j--) {
 				if (broj > stupac * red) {
 					break vanjska;
 				} else {
-					Matrica[stupacKraj][j] = broj++;
+					matrica[stupacKraj][j] = broj++;
 				}
 
 			}
@@ -38,7 +39,7 @@ public class ZimskiZadaci6 {
 				if (broj > stupac * red) {
 					break vanjska;
 				} else {
-					Matrica[j][redPocetak] = broj++;
+					matrica[j][redPocetak] = broj++;
 				}
 			}
 			redPocetak++;
@@ -48,7 +49,7 @@ public class ZimskiZadaci6 {
 				if (broj > stupac * red) {
 					break vanjska;
 				} else {
-					Matrica[stupacPocetak][j] = broj++;
+					matrica[stupacPocetak][j] = broj++;
 				}
 			}
 			stupacPocetak++;
@@ -58,19 +59,17 @@ public class ZimskiZadaci6 {
 				if (broj > stupac * red) {
 					break vanjska;
 				} else {
-					Matrica[j][redKraj] = broj++;
+					matrica[j][redKraj] = broj++;
 				}
 			}
 			redKraj--;
 		}
-
-		for (
-
-				int i = 0; i < stupac; i++) {
+		for ( int i = 0; i < stupac; i++) {
 			for (int j = 0; j < red; j++) {
-				System.out.print(Matrica[i][j] + "\t");
+				System.out.print(matrica[i][j] + "\t");
 			}
 			System.out.println();
 		}
+		
 	}
 }
