@@ -24,6 +24,15 @@ public class E02_KoristenjeMetoda {
 	
 	System.out.println(Z01.najveci(1, 3, 5));
 	
+	System.out.println(Z01.najveci(Z02.broj(), Z02.broj(), Z02.broj()));
+	
+	int z= Z03.imePrezime("Martina", "Novoeselac");
+	
+	System.out.println(z);
+	
+	System.out.println(E04_Rekurzija.zbroj(100));
+	
+	System.out.println(Z05.decimalni (3.14, 1.12));
 	}
 
 }
