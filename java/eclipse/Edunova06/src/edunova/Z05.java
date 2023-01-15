@@ -10,7 +10,7 @@ public class Z05 {
 
 	// 2.78, 0.30
 	// 1.08
-	public static int decimalni (float a, float b) {
-		return (int	)(a+b);
+	public static double decimalni (double a, double b) {
+		return (double)((a-(int)a) +( b -(int) b));
 	}
 }
