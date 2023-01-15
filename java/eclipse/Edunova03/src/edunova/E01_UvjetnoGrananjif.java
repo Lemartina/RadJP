@@ -96,9 +96,9 @@ public class E01_UvjetnoGrananjif {
 
 				i = 3;
 				if (i > 1) {
-					System.out.print("Pozitivna ");
+					System.out.println("Pozitivna ");
 				} else {
-					System.out.print("Negativna ");
+					System.out.println("Negativna ");
 				}
 				System.out.println("ocjena");
 

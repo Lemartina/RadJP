@@ -1,5 +1,7 @@
 package edunova;
 
+import java.util.Arrays;
+
 public class E04_VisedimenzionalniNizovi {
 
 	public static void main(String[] args) {

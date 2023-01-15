@@ -32,7 +32,11 @@ public class E02_KoristenjeMetoda {
 	
 	System.out.println(E04_Rekurzija.zbroj(100));
 	
-	System.out.println(Z05.decimalni (3.14, 1.12));
+	System.out.println(Z05.decimalni(3.14, 1.12));
+	
+//	System.out.println(Z05.decimalni(2.78, 0.30));
+//
+//	System.out.println(Z06.zbroji(3.14, 1.12));
 	}
 
 }
