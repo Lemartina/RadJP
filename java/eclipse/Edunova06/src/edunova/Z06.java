@@ -1,5 +1,7 @@
 package edunova;
 
+import javax.swing.JOptionPane;
+
 public class Z06 {
 
 	// upute:
@@ -30,23 +32,24 @@ public class Z06 {
 //	https://www.youtube.com/watch?v=iHCon5VmSyk
 
 	public static void main(String[] args) {
-		String ime1 = "Marta";
-		String ime2 = "Manuel";
-		String slovo;
-
-		String ljubav = ime1 + ime2;
-		System.out.print(ljubav);
-		int i, j;
-		slovo = "A";
-
-		int zbroj = 0;
-		for (i = 0; i <= ljubav.length(); i++) {
-			for (j = 0; j <= ljubav.length(); j++) {
-//		if (ljubav.charAt(i)== slovo) {
+		String ja=JOptionPane.showInputDialog("Kako se zoveš?");
+		String ti=JOptionPane.showInputDialog("kako se zove tvoja simpatija?");
+		String ljubav= ja + ti;
+		char slovo;
+		int brojacSlova=0;
+			
+		ljubav= JOptionPane.showInputDialog(
+			"Koje slovo želiš staviti u brojač?");
+		slovo=ljubav.charAt(0);
 		
-
-				zbroj = zbroj + 1;
-
-			System.out.print( i * j);
+		for(int i=0;i<ljubav.length(); i++) {
+			if (ljubav.charAt(i)==slovo) {
+				brojacSlova = brojacSlova +1;
+			}
 		}
-		}}}
+				
+				System.out.println("U ljubavi " 
+				+ ja + " i " + ti + " slovo " + slovo + 
+				" se poanavlja " + brojacSlova + " put/puta ");
+	}
+	}
