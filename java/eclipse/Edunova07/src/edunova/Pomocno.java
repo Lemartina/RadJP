@@ -61,4 +61,17 @@ public static int ucitajCijeliBrojURasponu(String poruka, int odBroj, int doBroj
 			
 	}
 
+public static String obavezanUnosStringa(String poruka) {
+	String s= "";
+	while (s.isEmpty()) {
+		s=JOptionPane.showInputDialog(poruka);
+		if (s.length()>0) {
+			return s;
+		}
+	}
+	return "";
+}
+public static int slucajniBrojUrasponu( int min, int max) {
+	return (int)((Math.random() * (min-max)) + min);
+}
 }
