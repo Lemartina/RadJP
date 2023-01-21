@@ -2,15 +2,7 @@ package edunova;
 
 public class Osoba {
 
-	// ovo su svojstva klase koja opisuju objekt
-//	String ime;
-//	String prezime;
-//	int godine;
-//	ovako nije doboro
-	
-// učahirivanje
-// klasa će sakriti svoja svojastva i učiniti ih privatnima
-// a svojstva će biti dostupna preko gettera i settera
+
 	private String ime;
 	private String prezime;
 	private int godine;
