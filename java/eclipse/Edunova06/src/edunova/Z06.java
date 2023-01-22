@@ -38,7 +38,7 @@ public class Z06 {
 
 		int brojac;
 
-		char a[] = (ljubav.toLowerCase()).toCharArray();
+		char a[] = (ljubav.toCharArray());
 
 		System.out.println(Arrays.toString(a));
 
