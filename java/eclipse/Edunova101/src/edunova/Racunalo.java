@@ -7,48 +7,40 @@ public class Racunalo {
 	private String nazivRacunala;
 	private int serijskiBroj;
 	private boolean ugradjenaBaterija;
-	private char oznakaSerije;
-	private float cijena;
-
-// 2. korak geteri i seteri
+	private byte brojJezgri;
+	private double cijena;
 	public String getNazivRacunala() {
 		return nazivRacunala;
 	}
-
 	public void setNazivRacunala(String nazivRacunala) {
 		this.nazivRacunala = nazivRacunala;
 	}
-
 	public int getSerijskiBroj() {
 		return serijskiBroj;
 	}
-
 	public void setSerijskiBroj(int serijskiBroj) {
 		this.serijskiBroj = serijskiBroj;
 	}
-
 	public boolean isUgradjenaBaterija() {
 		return ugradjenaBaterija;
 	}
-
 	public void setUgradjenaBaterija(boolean ugradjenaBaterija) {
 		this.ugradjenaBaterija = ugradjenaBaterija;
 	}
-
-	public char getOznakaSerije() {
-		return oznakaSerije;
+	public byte getBrojJezgri() {
+		return brojJezgri;
 	}
-
-	public void setOznakaSerije(char oznakaSerije) {
-		this.oznakaSerije = oznakaSerije;
+	public void setBrojJezgri(byte brojJezgri) {
+		this.brojJezgri = brojJezgri;
 	}
-
-	public float getCijena() {
+	public double getCijena() {
 		return cijena;
 	}
-
-	public void setCijena(float cijena) {
+	public void setCijena(double cijena) {
 		this.cijena = cijena;
 	}
+	
 
+	// 2. korak geteri i seteri
+	
 }
