@@ -60,13 +60,13 @@ public class E02_Start {
 		
 		//ovo je niz
 		Kupac []kupac= new Kupac[3],
-		kupac[0]= kreirajKupac("Iva", "I. Gundulića 40");
-		kupac[1]= kreirajKupac("Maja", "P. Preradovića 12");
-		kupac[2]=kreirajKupac("Marina", "LJ. Gaja 15");
+		kupac1[0]= kreirajKupac("Iva", "I. Gundulića 40");
+		kupac1[1]= kreirajKupac("Maja", "P. Preradovića 12");
+		kupac1[2]=kreirajKupac("Marina", "LJ. Gaja 15");
 		
 		Racun racun= new Racun();
 		
-		racun.setKupac(kupac);
+		racun.setKupac(kupac1);
 		
 		//ovo nije niz
 		
