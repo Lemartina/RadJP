@@ -6,8 +6,8 @@ public class Racunalo {
 
 	private String nazivRacunala;
 	private int serijskiBroj;
-	private boolean ugradjenaBaterija;
-	private byte brojJezgri;
+	private int ugradjenaBaterija;
+	private boolean brojJezgri;
 	private double cijena;
 	public String getNazivRacunala() {
 		return nazivRacunala;
@@ -21,17 +21,17 @@ public class Racunalo {
 	public void setSerijskiBroj(int serijskiBroj) {
 		this.serijskiBroj = serijskiBroj;
 	}
-	public boolean isUgradjenaBaterija() {
+	public int isUgradjenaBaterija() {
 		return ugradjenaBaterija;
 	}
-	public void setUgradjenaBaterija(boolean ugradjenaBaterija) {
-		this.ugradjenaBaterija = ugradjenaBaterija;
+	public void setUgradjenaBaterija(int i) {
+		this.ugradjenaBaterija = i;
 	}
-	public byte getBrojJezgri() {
+	public boolean getBrojJezgri() {
 		return brojJezgri;
 	}
-	public void setBrojJezgri(byte brojJezgri) {
-		this.brojJezgri = brojJezgri;
+	public void setBrojJezgri(boolean b) {
+		this.brojJezgri = b;
 	}
 	public double getCijena() {
 		return cijena;

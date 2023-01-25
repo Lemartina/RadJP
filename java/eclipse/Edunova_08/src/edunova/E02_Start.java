@@ -6,19 +6,9 @@ public class E02_Start {
 
 	
 	public static void main(String[] args) {
-		// Ovo morate znati u svako doba dana i noći
-		// Objekt je instanca klase
-		// Osoba je tip podatka - klasa
-		// osoba je instanca klase/objekt/varijabla
-		// new: ključna riječ za poziv konstruktora klase
+	
 		Osoba osoba = new Osoba();
-		
-		// Po OOP pravilima ne smije se omogućiti direktan pristup svojstvima
-		// OVO NEĆEMO RADITI
-		//osoba.ime="Pero";
-		//System.out.println(osoba.ime);
-		
-		//postavljanje vrijednosti svojstava na objekt
+	
 		osoba.setIme(Pomocno.obavezanUnosStringa("Unesi ime"));
 		osoba.setPrezime("Perić");
 		osoba.setGodine(24);
@@ -58,25 +48,18 @@ public class E02_Start {
 //		ovo nije dobro	
 		Kupac kupac= new Kupac();
 		
-		//ovo je niz
-		Kupac []kupac= new Kupac[3],
-		kupac1[0]= kreirajKupac("Iva", "I. Gundulića 40");
-		kupac1[1]= kreirajKupac("Maja", "P. Preradovića 12");
-		kupac1[2]=kreirajKupac("Marina", "LJ. Gaja 15");
-		
-		Racun racun= new Racun();
-		
-		racun.setKupac(kupac1);
-		
-		//ovo nije niz
+	
+		Racun [] racuni = new Racun[3];
 		
 		
-		Racun racun1=kreirajRacun("2023-11-01", 2353.56f,
-				kreirajKupac("Petar", "Ivana Gundulića 40"));
-		Racun racun2=kreirajRacun("2022-10-01", 5698.56f, 
-kreirajKupac("Ivan", "Petra Preradovića 1"));
-		Racun racun3=kreirajRacun("2021-09-06", 23698.89f, 
-				kreirajKupac("Ivana", "ljudevita Gaja 25"));
+		
+		
+	racuni [0]=dodajRacun("2023-11-01", 2353.56f,
+				dodajKupac("Petar", "Ivana Gundulića 40"));
+	racuni [1]=dodajRacun("2022-10-01", 5698.56f, 
+dodajKupac("Ivan", "Petra Preradovića 1"));
+racuni [2]=dodajRacun("2021-09-06", 23698.89f, 
+				dodajKupac("Ivana", "ljudevita Gaja 25"));
 				
 		
 		
@@ -122,7 +105,7 @@ kreirajKupac("Ivan", "Petra Preradovića 1"));
 	
 	}
 	
-	private static Kupac kreirajKupac(
+	private static Kupac dodajKupac(
 			String naziv, String adresa) {
 		Kupac kupac= new Kupac();
 		kupac.setNaziv(naziv);
@@ -130,7 +113,7 @@ kreirajKupac("Ivan", "Petra Preradovića 1"));
 		return kupac;
 	}
 	
-	private static Racun kreirajRacun(Date datum,
+	private static Racun dodajRacun(Date datum,
 			float iznos, Kupac kupac) {
 		Racun racun= new Racun();
 		racun.setDatum(datum);

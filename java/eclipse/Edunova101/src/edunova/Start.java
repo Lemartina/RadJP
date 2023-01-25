@@ -26,12 +26,7 @@ public static void main(String[] args) {
 
 	//5.korak ispis
 	
-	System.out.println(racunalo[0].getNazivRacunala(),
-			   racunalo[0].getSerijskiBroj(),
-			   racunalo[0].getBrojJezgri(),
-			   racunalo[0].getCijena(),
-			   racunalo[0].getNazivRacunala(),
-			   racunalo[0].getUgradjenaBaterija());
+	System.out.println();
 			   
 }
 	
@@ -40,15 +35,15 @@ public static void main(String[] args) {
 	private static Racunalo kreirajRacunalo(
 			String nazivRacunala,
 			int serijskiBroj,
-			boolean ugradjenaBaterija,
-		byte brojJezgri,
+			int i,
+		boolean b,
 double cijena) {
 		
 		Racunalo racunalo = new Racunalo();
 		racunalo.setNazivRacunala(nazivRacunala);
 		racunalo.setSerijskiBroj(serijskiBroj);
-		racunalo.setUgradjenaBaterija(ugradjenaBaterija);
-		racunalo.setBrojJezgri(brojJezgri);
+		racunalo.setUgradjenaBaterija(i);
+		racunalo.setBrojJezgri(b);
 		racunalo.setCijena(cijena);
 		return racunalo;
 	
