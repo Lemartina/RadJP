@@ -11,171 +11,111 @@ public class Z06 {
 	// znakovi se stavlja u niz
 	// poziva istu metodu dok ne dođe do broja manjeg od 100
 	// koristiti i petlju i uvjetno grananje
-
 	
-
 	public static void main(String[] args) {
 		String ja = JOptionPane.showInputDialog("Kako se zoveš?");
 		String ti = JOptionPane.showInputDialog("Kako se zove tvoja simpatija?");
-
-
-//foreach petlja
 		String broj = "";
 		for (int i : racunamLjubav(brojimSlova(ja, ti))) {
 			broj += i;
-
 		}
-//ispis
 		System.out.print(ja + " i " + ti + " su kopatibilni " + broj + "%");
-
 	}
 	
-	
-	//metoda prima 2 parametra
 	public static int[] brojimSlova(String ja, String ti) {
-
 		String ljubav = ja + ti;
-
 		int brojac;
-
 		char a[] = (ljubav.toCharArray());
-
-		System.out.println(Arrays.toString(a));
-
-//niz
+		System.out.println(Arrays.toString(a)+"niz slova");
 		int brojevi[] = new int[ljubav.length()];
-//for petlja
 		for (int i = 0; i <= (ljubav.length() - 1); i++) {
 			brojac = 0;
 			for (int j = 0; j <= (ljubav.length() - 1); j++) {
 				if (a[i] == a[j]) {
 					brojac++;
 				}
-
 			}
 			brojevi[i] = brojac;
 		}
-
 		brojevi = dugiBroj(brojevi);
-
-//ispis niza	
-		System.out.println(Arrays.toString(brojevi));
-
-		//uvjetno grananje
-
+		System.out.println(Arrays.toString(brojevi)+ "niz brojeva");
 		if (ja.length() >= ti.length()) {
-			int[] prviKorak = new int[ja.length()];
+			int[] prvidrugo = new int[ja.length()];
 			for (int i = 0, index = 0; index < ja.length(); index++, i++) {
 				if (index >= ti.length()) {
-					prviKorak[index] = 0 + brojevi[brojevi.length - (1 + i)];
+					prvidrugo[index] = 0 + brojevi[brojevi.length - (1 + i)];
 				} else {
-					prviKorak[index] = brojevi[i] + brojevi[brojevi.length - (1 + i)];
-
+					prvidrugo[index] = brojevi[i] + brojevi[brojevi.length - (1 + i)];
 				}
-
 			}
-
-			prviKorak = dugiBroj(prviKorak);
-
-			return prviKorak;
-
+			prvidrugo = dugiBroj(prvidrugo);
+			return prvidrugo;
 		}
-
 		else {
-			int[] prviKorak = new int[ti.length()];
+			int[] prvidrugo = new int[ti.length()];
 			for (int i = 0, index = 0; index < ti.length(); index++, i++) {
 				if (index >= ja.length()) {
-					prviKorak[index] = 0 + brojevi[brojevi.length - (1 + i)];
+					prvidrugo[index] = 0 + brojevi[brojevi.length - (1 + i)];
 				} else {
-					prviKorak[index] = brojevi[i] + brojevi[brojevi.length - (1 + i)];
+					prvidrugo[index] = brojevi[i] + brojevi[brojevi.length - (1 + i)];
 				}
-
 			}
-
-			prviKorak = dugiBroj(prviKorak);
-
-			return prviKorak;
-
+			prvidrugo = dugiBroj(prvidrugo);
+			return prvidrugo;
 		}
-
 	}
-
 	public static int[] racunamLjubav(int[] zbrajanje) {
-
-
-		System.out.println(Arrays.toString(zbrajanje));
-
-
-
+		System.out.println(Arrays.toString(zbrajanje) + " još jedan niz brojeva");
 		if (zbrajanje.length <= 2) {
-
 			return zbrajanje;
 		} else {
 			if (zbrajanje.length % 2 == 0) {
-				int[] korak = new int[zbrajanje.length / 2];
-				for (int i = 0; i < korak.length; i++) {
-
-					korak[i] = zbrajanje[i] + zbrajanje[zbrajanje.length - (1 + i)];
-
+				int[] drugo = new int[zbrajanje.length / 2];
+				for (int i = 0; i < drugo.length; i++) {
+					drugo[i] = zbrajanje[i] + zbrajanje[zbrajanje.length - (1 + i)];
 				}
-
-				korak = dugiBroj(korak);
-				if (korak.length > 2) {
-
-					return racunamLjubav(korak);
-
+				drugo = dugiBroj(drugo);
+				if (drugo.length > 2) {
+					return racunamLjubav(drugo);
 				} else {
-
-					return racunamLjubav(korak);
-
+					return racunamLjubav(drugo);
 				}
-
 			} else {
-				int[] korak = new int[(zbrajanje.length / 2) + 1];
-				for (int i = 0; i < korak.length; i++) {
-
-					if (i == korak.length-1) {
-						korak[i] = 0 + zbrajanje[zbrajanje.length - (1 + i)];
+				int[] drugo = new int[(zbrajanje.length / 2) + 1];
+				for (int i = 0; i < drugo.length; i++) {
+					if (i == drugo.length-1) {
+						drugo[i] = 0 + zbrajanje[zbrajanje.length - (1 + i)];
 					} else {
-						korak[i] = zbrajanje[i] + zbrajanje[zbrajanje.length - (1 + i)];
+						drugo[i] = zbrajanje[i] + zbrajanje[zbrajanje.length - (1 + i)];
 					}
-
 				}
 
-				if (korak.length > 2) {
-
-					return racunamLjubav(dugiBroj(korak));
-
+				if (drugo.length > 2) {
+					return racunamLjubav(dugiBroj(drugo));
 				} else {
-					return racunamLjubav(dugiBroj(korak));
-
+					return racunamLjubav(dugiBroj(drugo));
 				}
 			}
 		}
-
 	}
 
-	public static int[] dugiBroj(int[] unos) {
+	public static int[] dugiBroj(int[] upisImena) {
 		int brojac = 0;
-		for (int i : unos) {
+		for (int i : upisImena) {
 			if (i >= 10) {
 				brojac++;
 			}
 		}
-		int[] kratkiBroj = new int[unos.length + brojac];
-
-		for (int i = 0, j = 0; i < unos.length; i++) {
-			if (unos[i] < 10) {
-				kratkiBroj[j++] = unos[i];
+		int[] kratkiBroj = new int[upisImena.length + brojac];
+		for (int i = 0, j = 0; i < upisImena.length; i++) {
+			if (upisImena[i] < 10) {
+				kratkiBroj[j++] = upisImena[i];
 			} else {
-				kratkiBroj[j++] = (unos[i] / 10);
-				kratkiBroj[j++] = (unos[i] % 10);
+				kratkiBroj[j++] = (upisImena[i] / 10);
+				kratkiBroj[j++] = (upisImena[i] % 10);
 			}
 		}
-
 		int[] a = kratkiBroj;
-
 		return a;
 	}
-
 }
