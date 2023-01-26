@@ -45,23 +45,19 @@ public class E02_Start {
 		Grupa pp26= kreirajGrupu(1, "PP26", 20, new Date(),
 				kreiraSmjer(1, "PHP programiranje", 
 						5999.99f, 50f, false));
-//		ovo nije dobro	
-		Kupac kupac= new Kupac();
-		
+
 	
 		Racun [] racuni = new Racun[3];
 		
-		
-		
-		
-	racuni [0]=dodajRacun("2023-11-01", 2353.56f,
-				dodajKupac("Petar", "Ivana Gundulića 40"));
-	racuni [1]=dodajRacun("2022-10-01", 5698.56f, 
-dodajKupac("Ivan", "Petra Preradovića 1"));
-racuni [2]=dodajRacun("2021-09-06", 23698.89f, 
-				dodajKupac("Ivana", "ljudevita Gaja 25"));
-				
-		
+//					
+//	racuni [0]=dodajRacun("2023-11-01", 2353.56f,
+//				dodajKupac("Petar", "Ivana Gundulića 40"));
+//	racuni [1]=dodajRacun("2022-10-01", 5698.56f, 
+//dodajKupac("Ivan", "Petra Preradovića 1"));
+//racuni [2]=dodajRacun("2021-09-06", 23698.89f, 
+//				dodajKupac("Ivana", "ljudevita Gaja 25"));
+//				
+//		
 		
 		
 			
