@@ -98,7 +98,6 @@ public class Z06 {
 			}
 		}
 	}
-
 	public static int[] dugiBroj(int[] upisImena) {
 		int brojac = 0;
 		for (int i : upisImena) {
