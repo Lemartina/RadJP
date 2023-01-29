@@ -2,7 +2,6 @@ package edunova;
 
 public class Racunalo {
 
-// 1. korak svojstva klase
 
 	private String nazivRacunala;
 	private int serijskiBroj;
@@ -39,8 +38,6 @@ public class Racunalo {
 	public void setCijena(double cijena) {
 		this.cijena = cijena;
 	}
-	
 
-	// 2. korak geteri i seteri
 	
 }
