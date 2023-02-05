@@ -12,7 +12,7 @@ create table usluga(
     sifra int not null primary key auto_increment,
     naziv varchar (50),
     cijena decimal(18,2),
-    jeidnicaMjere varchar(10),
+    jednicaMjere varchar(10),
     kolicina decimal(18,2)
 );
 
