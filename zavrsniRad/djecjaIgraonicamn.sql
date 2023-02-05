@@ -31,6 +31,7 @@ create table posjeta(
     sifra int not null primary key auto_increment,
     datumVrijemeDolaska datetime,
     datumVrijemeOdlaska datetime,
+    napomena varchar(500),
     djelatnik int
     
 );
