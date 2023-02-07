@@ -93,11 +93,11 @@ values
 
 insert into usluga(sifra, naziv, cijena, jeidnicaMjere, kolicina)
 values
-(null, 'Rođendan', '750.00', 'sat', 5),
-(null, 'Dnevno čuvanje', '250.00', 'sat', 1),
-(null, 'Tiskanje pozivnica', '10.00', 'kom', 1),
-(null, 'Torta', '500.00', 'kom', 1),
-(null, 'Umjetnička radionica', '100.00', 'sat', 2);
+(null, 'Rođendan', '20.00', 'sat', 5),
+(null, 'Dnevno čuvanje', '10.00', 'sat', 1),
+(null, 'Tiskanje pozivnica', '1.00', 'kom', 1),
+(null, 'Torta', '35.00', 'kom', 1),
+(null, 'Umjetnička radionica', '10.00', 'sat', 2);
 
 insert into posjeta(sifra, datumVrijemeDolaska, datumVrijemeOdlaska, djelatnik)
 values
