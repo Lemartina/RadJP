@@ -99,11 +99,11 @@ values
 (null, 'Torta', '35.00', 'kom', 1),
 (null, 'Umjetnička radionica', '10.00', 'sat', 2);
 
-insert into posjeta(sifra, datumVrijemeDolaska, datumVrijemeOdlaska, djelatnik)
+insert into posjeta(sifra, datumVrijemeDolaska, datumVrijemeOdlaska, napomena, djelatnik)
 values
-(null, '2022-05-01 13:00:00', '2022-05-01 14:00:00',2),
-(null, '2022-06-01 14:00:00', '2022-05-01 19:00:00',1),
-(null, '2022-07-01 09:00:00', '2022-05-01 11:00:00',3);
+(null, '2022-05-01 13:00:00', '2022-05-01 14:00:00', null,2),
+(null, '2022-06-01 14:00:00', '2022-05-01 19:00:00', null,1),
+(null, '2022-07-01 09:00:00', '2022-05-01 11:00:00', null,3);
 
 insert into posjetadijete (posjeta, dijete)
 values
