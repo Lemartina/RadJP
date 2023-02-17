@@ -121,7 +121,7 @@ public class Prozor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHelloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelloActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_btnHelloActionPerformed
 
     private void lblIspisAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lblIspisAncestorAdded
@@ -133,7 +133,7 @@ public class Prozor extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUnosImenaActionPerformed
 
     private void txtImeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtImeActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_txtImeActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
