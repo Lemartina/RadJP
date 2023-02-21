@@ -26,4 +26,46 @@ public class Osoba {
     public Integer getSifra(){
         return sifra;
     }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+
+    public String getPrezime() {
+        return prezime;
+    }
+
+    public void setPrezime(String prezime) {
+        this.prezime = prezime;
+    }
+
+    public BigDecimal getPrimanja() {
+        return primanja;
+    }
+
+    public void setPrimanja(BigDecimal primanja) {
+        this.primanja = primanja;
+    }
+
+    public Boolean getAktivan() {
+        return aktivan;
+    }
+
+    public void setAktivan(Boolean aktivan) {
+        this.aktivan = aktivan;
+    }
+
+    public Date getDatumRodenja() {
+        return datumRodenja;
+    }
+
+    public void setDatumRodenja(Date datumRodenja) {
+        this.datumRodenja = datumRodenja;
+    }
+    
+    
 }
