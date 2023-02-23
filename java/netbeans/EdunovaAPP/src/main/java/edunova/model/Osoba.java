@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -5,26 +6,27 @@
 package edunova.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- *
- * @author Administrator
- */
 @Entity
 public class Osoba {
     
+    @Id
     private Integer sifra;
     private String ime;
     private String prezime;
     private BigDecimal primanja;
     private Boolean aktivan;
     private Date datumRodenja;
-    
-    
-    public Integer getSifra(){
+
+    public Integer getSifra() {
         return sifra;
+    }
+
+    public void setSifra(Integer sifra) {
+        this.sifra = sifra;
     }
 
     public String getIme() {
@@ -66,6 +68,7 @@ public class Osoba {
     public void setDatumRodenja(Date datumRodenja) {
         this.datumRodenja = datumRodenja;
     }
+    
     
     
 }

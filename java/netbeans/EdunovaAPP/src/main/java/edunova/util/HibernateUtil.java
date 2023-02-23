@@ -12,13 +12,11 @@ import org.hibernate.cfg.Configuration;
  * @author Administrator
  */
 public class HibernateUtil {
- 
     private static Session session=null;
     
     protected HibernateUtil(){
         
     }
-    
     public static Session getSession(){
         if(session==null){
             session = new Configuration().configure().buildSessionFactory().openSession();
