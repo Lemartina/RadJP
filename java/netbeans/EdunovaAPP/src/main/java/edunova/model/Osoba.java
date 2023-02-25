@@ -13,7 +13,7 @@ import jakarta.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Entity(name="osobe")
+@Entity
 public class Osoba {
     
     @Id
@@ -24,10 +24,10 @@ public class Osoba {
             length=50)
     private String ime;
     private String prezime;
-    @Column(columnDefinition="decimal(18,2")
+//    @Column(columnDefinition="decimal(18,2")
     private BigDecimal primanja;
     private Boolean aktivan;
-    @Column(columnDefinition="datetime")
+//    @Column(columnDefinition="datetime")
     private Date datumRodenja;
 
     public Integer getSifra() {

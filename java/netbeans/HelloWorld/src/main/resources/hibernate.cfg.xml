@@ -19,6 +19,7 @@
     <property name="hbm2ddl.auto">update</property>
     
     <mapping class="edunova.model.Osoba" />
+    <mapping class="edunova.model.Djelatnik"/>
     
     
   </session-factory>
