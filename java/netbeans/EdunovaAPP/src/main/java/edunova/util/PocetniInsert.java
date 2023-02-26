@@ -9,9 +9,9 @@ import edunova.model.Grupa;
 import edunova.model.Polaznik;
 import edunova.model.Predavac;
 import edunova.model.Smjer;
-
-
 import java.math.BigDecimal;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
@@ -21,27 +21,90 @@ import org.hibernate.Session;
  * @author Administrator
  */
 public class PocetniInsert {
+    
+    private static final int BROJ_SMJEROVA=15;
+    private static final int BROJ_PREDAVACA=7;
+    private static final int BROJ_POLAZNIKA=3000;
+    private static final int BROJ_GRUPA=220;
 
-   private  Faker faker;
+   private Faker faker;
    private List<Smjer> smjerovi;
-   private List <Grupa> grupe;
+   
    private List <Polaznik> polaznici;
    private List <Predavac> predavaci;
+   private Session session;
     
+   //konstruktor
     public PocetniInsert() {
         
         faker= new Faker();
         smjerovi=new ArrayList<>();
-        grupe=new ArrayList<>();
+        
         polaznici=new ArrayList<>();
         predavaci=new ArrayList<>();
         session = HibernateUtil.getSession();
         session.beginTransaction();
+        
+        //metode
         kreirajSmjerove();
+        kreirajPredavace();
+        kreirajPolaznike();
+        kreirajGrupe();
     }
 
-    private void kreirajSmjerove() {
+    private void kreirajSmjerove()
+    {
+        Smjer s;
+        for(int i=0; i<BROJ_SMJEROVA;i++){
+            s=new Smjer();
+            s.setNaziv(faker.app().name());
+            s.setCertificiran(faker.bool().bool());
+            s.setCijena(new BigDecimal(faker.number().numberBetween(800, 1200)));
+            s.setUpisnina(new BigDecimal(faker.number().numberBetween(70, 90)));
+            s.setTrajanje(faker.number().numberBetween(90, 230));
+            session.persist(s);
+            smjerovi.add(s);
+            
+        }
             }
+
+    private void kreirajPredavace() {
+        Predavac p;
+        for(int i=0;i<BROJ_PREDAVACA;i++){
+        p=new Predavac();
+        p.setIme(faker.name().firstName());
+        p.setPrezime(faker.name().lastName());
+//        p.setOib(Alati.dovuciOib());
+        p.setEmail(faker.internet().emailAddress());
+        p.setIban(faker.business().creditCardNumber());
+        session.persist(p);
+        predavaci.add(p);
+    }
+        
+         }
+
+    private void kreirajPolaznike() {
+        Polaznik p;
+        for(int i=0; i<BROJ_POLAZNIKA; i++){
+            p=new Polaznik();
+            p.setIme(faker.name().firstName());
+            p.setPrezime(faker.name().lastName());
+            p.setEmail(faker.internet().emailAddress());
+            p.setBrojUgovora(faker.business().creditCardNumber());
+        session.persist(p);
+        polaznici.add(p);
+        
+        }
+        
+        }
+
+    private void kreirajGrupe() {
+      Grupa g;
+      for (int i=0; i<BROJ_GRUPA; i++)
+          g= new Grupa();
+      g.setNaziv(naziv);
+      
+    }
 
 
     
