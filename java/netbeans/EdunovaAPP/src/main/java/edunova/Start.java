@@ -16,6 +16,7 @@ import edunova.util.PocetniInsert;
 public class Start {
 
     public static void main(String[] args) {
-       PocetniInsert.izvedi();
+//       PocetniInsert.izvedi();
+HibernateUtil.getSession();
     }
 }
